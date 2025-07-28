@@ -1,12 +1,10 @@
-# codebasics ML course: codebasics.io, all rights reserverd
-
 import pandas as pd
 import joblib
 
-model_young = joblib.load("artifacts/model_young.joblib")
-model_rest = joblib.load("artifacts/model_rest.joblib")
-scaler_young = joblib.load("artifacts/scaler_young.joblib")
-scaler_rest = joblib.load("artifacts/scaler_rest.joblib")
+model_young = joblib.load("artifacts\model_young.joblib")
+model_rest = joblib.load("artifacts\model_rest.joblib")
+scaler_young = joblib.load("artifacts\scaler_young.joblib")
+scaler_rest = joblib.load("artifacts\scaler_rest.joblib")
 
 def calculate_normalized_risk(medical_history):
     risk_scores = {
@@ -115,6 +113,8 @@ def predict(input_dict):
     if input_dict['Age'] <= 25:
         prediction = model_young.predict(input_df)
     else:
+        print("model_rest expects:", model_rest.feature_names_in_)
+        print("input_df columns  :", input_df.columns.tolist())
         prediction = model_rest.predict(input_df)
 
     return int(prediction[0])
