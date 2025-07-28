@@ -3,8 +3,11 @@ This Streamlit web app predicts the health insurance cost based on user details 
 
 🚀 Features
 -> Interactive form for user input
+
 -> Instant premium cost prediction
+
 -> Clean and responsive UI
+
 -> Built with scikit-learn, xgboost, and streamlit
 
 🛠️ Tech Stack
