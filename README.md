@@ -2,6 +2,7 @@
 This Streamlit web app predicts the health insurance cost based on user details like age, income, BMI, medical history, and more. It uses a machine learning model trained on real insurance data to estimate costs accurately.
 
 🚀 Features
+
 -> Interactive form for user input
 
 -> Instant premium cost prediction
